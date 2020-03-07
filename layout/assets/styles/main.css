@@ -13,6 +13,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10;
   /* Modifiers */
 }
 
@@ -41,8 +42,6 @@
 }
 
 .topbar--transparent {
-  background: #333333;
-  background: #333333;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(51, 51, 51, 0)), color-stop(60%, rgba(51, 51, 51, 0.53)), to(rgba(51, 51, 51, 0.912202)));
   background: linear-gradient(0deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.53) 60%, rgba(51, 51, 51, 0.912202) 100%);
 }
@@ -153,6 +152,46 @@ div.hero__closing-label, div.hero__closing-time {
   font-weight: normal;
   color: white;
   position: relative;
+}
+
+div.content {
+  padding: 3.3rem 10.2rem;
+}
+
+div.message {
+  min-height: 10rem;
+  background-color: #EBEBEB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #333333;
+  padding: 1.6rem 2.51rem;
+  font-weight: 100;
+}
+
+div.message__title {
+  width: 25rem;
+  font-size: 2.171rem;
+}
+
+div.message__title > b {
+  font-size: 3.71rem;
+}
+
+div.message__description {
+  font-size: 1.5rem;
+  margin-left: 0.85rem;
+  line-height: 2.275rem;
+}
+
+div.message .icon-close {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 html,

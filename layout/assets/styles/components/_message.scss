@@ -1,0 +1,31 @@
+div.message {
+  min-height: 10rem;
+  background-color: #EBEBEB;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #333333;
+  padding: 1.6rem 2.51rem;
+  font-weight: map-get($font-weights, 'light');
+
+  &__title {
+    width: 25rem;
+    font-size: 2.171rem;
+
+    >b {
+      font-size: 3.71rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    margin-left: 0.85rem;
+    line-height: 2.275rem;
+  }
+
+  .icon-close {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}

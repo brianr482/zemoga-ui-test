@@ -8,6 +8,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10;
 
   &__title {
     margin: unset;
@@ -27,8 +28,9 @@
 
   /* Modifiers */
   &--transparent {
-    background: rgb(51, 51, 51);
-    background: rgb(51, 51, 51);
-    background: linear-gradient(0deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.53) 60%, rgba(51, 51, 51, 0.9122023809523809) 100%);
+    background: linear-gradient(0deg,
+        rgba(51, 51, 51, 0) 0%,
+        rgba(51, 51, 51, 0.53) 60%,
+        rgba(51, 51, 51, 0.9122023809523809) 100%);
   }
 }
