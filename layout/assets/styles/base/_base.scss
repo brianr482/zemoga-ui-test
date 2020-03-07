@@ -1,3 +1,5 @@
+@import '../abstracts/variables';
+
 html,
 body {
   background: transparent;
@@ -7,5 +9,9 @@ body {
 }
 
 html {
-  font-size: 62.5%; // 1rem = 10px
+  font-size: $global-font-size; // 1rem = 10px
+}
+
+body {
+  font-family: 'Lato', Fallback, sans-serif;
 }
