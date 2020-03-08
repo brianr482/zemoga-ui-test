@@ -18,9 +18,9 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-twitter:before{content:'\0042';}
 .icon-cancel:before{content:'\0043';}
 .icon-facebook:before{content:'\0044';}
 .icon-search:before{content:'\0045';}
+.icon-twitter:before{content:'\0046';}
 .icon-thumb-up:before{content:'\0054';}
 .icon-thumb-down:before{content:'\0055';}
