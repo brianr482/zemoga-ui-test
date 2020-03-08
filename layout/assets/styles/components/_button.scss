@@ -1,5 +1,16 @@
 .btn {
   cursor: pointer;
 
-  &.--link {}
+  &--link {}
+
+  &--outline {
+    min-width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: 0.1rem solid;
+    border-color: inherit;
+    padding: 1.1rem 0;
+  }
 }
