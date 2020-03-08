@@ -1,36 +1,91 @@
 .opinion-card {
-  background: inherit;
   position: relative;
-  overflow: hidden;
-  z-index: 1;
+  background: inherit;
+  max-width: 50rem;
+  width: 100%;
+
+  &:before {}
+
+  &__verdict {
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: map-get($font-weights, 'bold');
+    position: relative;
+  }
+
+  &__extra-info {
+    font-size: 1.4rem;
+    font-weight: map-get($font-weights, 'light');
+    position: relative;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    font-size: 2.1rem;
+    font-weight: map-get($font-weights, 'light');
+    margin-top: 1.8rem;
+    line-height: 2.1rem;
+    position: relative;
+  }
 
   &__content {
-    padding: 3rem;
-    background: inherit;
-    position: relative;
     overflow: hidden;
+    color: white;
+    position: relative;
+    padding: 3rem 6rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    background: inherit;
+    z-index: 1;
 
     &:before {
-      content: "";
-      position: absolute;
+      content: '';
       background: inherit;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      filter: blur(1rem);
+      position: absolute;
+      left: -4rem;
+      top: -4rem;
+      bottom: -4rem;
+      right: -4rem;
+      box-shadow: inset 0 0 0 3000px rgba(#333333, 0.3);
+      filter: blur(2rem);
     }
   }
 
   &__question {
-    @include font-format('sm');
+    @include font-format('md', 'light');
     position: relative;
   }
 
   &__celebrity {
-    @include font-format('xl');
+    font-size: 6rem;
     color: white;
     position: relative;
+  }
+
+  &__actions {
+    display: flex;
+    height: 8rem;
+    color: white;
+
+    &--positive {
+      background-color: map-get($colors, 'success');
+    }
+
+    &--negative {
+      background-color: map-get($colors, 'warning');
+    }
+
+    &--positive,
+    &--negative {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.7rem;
+      padding: 0.7rem;
+      width: 50%;
+    }
   }
 }

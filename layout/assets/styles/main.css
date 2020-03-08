@@ -57,12 +57,18 @@
   height: 74.5rem;
   background: url("/ui-test/layout/assets/imgs/pope.jpg");
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   position: relative;
+  /* 
+    To fix perfomance problem in webkit browsers, on parallax effect
+  */
+  will-change: transform;
 }
 
 .hero__content {
-  padding: 20rem 10rem 0rem 10rem;
+  background: inherit;
+  padding: 20rem 10rem 0rem 13rem;
 }
 
 .hero__closing-bar {
@@ -143,43 +149,108 @@
 }
 
 .opinion-card {
-  background: inherit;
   position: relative;
-  overflow: hidden;
-  z-index: 1;
+  background: inherit;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.opinion-card__verdict {
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.opinion-card__extra-info {
+  font-size: 1.4rem;
+  font-weight: 100;
+  position: relative;
+}
+
+.opinion-card__extra-info a {
+  text-decoration: underline;
+}
+
+.opinion-card__description {
+  font-size: 2.1rem;
+  font-weight: 100;
+  margin-top: 1.8rem;
+  line-height: 2.1rem;
+  position: relative;
 }
 
 .opinion-card__content {
-  padding: 3rem;
-  background: inherit;
-  position: relative;
   overflow: hidden;
+  color: white;
+  position: relative;
+  padding: 3rem 6rem 3rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: inherit;
+  z-index: 1;
 }
 
 .opinion-card__content:before {
-  content: "";
-  position: absolute;
+  content: '';
   background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  position: absolute;
+  left: -4rem;
+  top: -4rem;
+  bottom: -4rem;
+  right: -4rem;
+  -webkit-box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.3);
+          box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.3);
+  -webkit-filter: blur(2rem);
+          filter: blur(2rem);
 }
 
 .opinion-card__question {
-  font-size: 1.2rem;
-  font-weight: normal;
+  font-size: 1.6rem;
+  font-weight: 100;
   position: relative;
 }
 
 .opinion-card__celebrity {
-  font-size: 3.2rem;
-  font-weight: normal;
+  font-size: 6rem;
   color: white;
   position: relative;
+}
+
+.opinion-card__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8rem;
+  color: white;
+}
+
+.opinion-card__actions--positive {
+  background-color: #1CBBB4;
+}
+
+.opinion-card__actions--negative {
+  background-color: #FFAD1D;
+}
+
+.opinion-card__actions--positive, .opinion-card__actions--negative {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.7rem;
+  padding: 0.7rem;
+  width: 50%;
 }
 
 div.content {
@@ -349,6 +420,7 @@ div.content {
 
 .voting-card__positive-votes, .voting-card__negative-votes {
   padding: 0.9rem 1rem;
+  text-align: right;
 }
 
 .voting-card__counter {
