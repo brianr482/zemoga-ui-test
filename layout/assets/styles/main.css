@@ -33,12 +33,19 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
   font-weight: normal;
 }
 
 .topbar__menu .topbar__btn:nth-child(n + 2) {
   margin-left: 4rem;
+}
+
+.topbar__menu [class*='icon'] {
+  font-size: 2.5rem;
 }
 
 .topbar--transparent {
@@ -209,7 +216,7 @@ div.content {
   line-height: 2.275rem;
 }
 
-.message .icon-close {
+.message [class*='icon'] {
   margin-left: 2rem;
   font-size: 1.6rem;
   cursor: pointer;

@@ -19,10 +19,15 @@
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    align-items: center;
     @include font-format('sm');
 
     .topbar__btn:nth-child(n + 2) {
       margin-left: 4rem;
+    }
+
+    [class*='icon'] {
+      font-size: 2.5rem;
     }
   }
 
