@@ -1,0 +1,26 @@
+.list {
+  max-width: 128rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.03rem;
+
+  &__title {
+    font-weight: map-get($font-weights, 'light');
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -1rem;
+  }
+
+  &__item {
+    width: 49.2rem;
+    margin: 1rem;
+    position: relative;
+  }
+}

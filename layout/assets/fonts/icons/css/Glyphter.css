@@ -19,3 +19,5 @@
    -moz-osx-font-smoothing: grayscale
 }
 .icon-close:before{content:'\0043';}
+.icon-thumb-up:before{content:'\0054';}
+.icon-thumb-down:before{content:'\0055';}
