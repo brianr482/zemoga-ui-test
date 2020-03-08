@@ -114,6 +114,10 @@
   cursor: pointer;
 }
 
+.btn--link:hover {
+  text-decoration: underline;
+}
+
 .btn--outline {
   min-width: 15rem;
   display: -webkit-box;
@@ -410,6 +414,68 @@ div.content {
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 0;
   height: 100%;
+}
+
+.footer {
+  color: #333333;
+  height: 5.4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.footer__internal-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.footer__internal-links .btn:nth-child(n + 2) {
+  margin-left: 1.3rem;
+}
+
+.footer__social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__social-networks-label {
+  margin-bottom: 0.5rem;
+}
+
+.footer__social-networks [class*='icon'] {
+  font-size: 2.5rem;
+}
+
+.footer__social-networks > *:nth-child(n + 2) {
+  margin-left: 2rem;
+}
+
+.footer:before {
+  content: "";
+  position: absolute;
+  border-top: 3px dotted #707070;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  z-index: -1;
 }
 
 html,

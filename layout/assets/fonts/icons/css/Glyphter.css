@@ -18,6 +18,8 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-close:before{content:'\0043';}
+.icon-twitter:before{content:'\0042';}
+.icon-x:before{content:'\0043';}
+.icon-facebook:before{content:'\0044';}
 .icon-thumb-up:before{content:'\0054';}
 .icon-thumb-down:before{content:'\0055';}

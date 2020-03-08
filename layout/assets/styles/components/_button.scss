@@ -1,7 +1,11 @@
 .btn {
   cursor: pointer;
 
-  &--link {}
+  &--link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   &--outline {
     min-width: 15rem;

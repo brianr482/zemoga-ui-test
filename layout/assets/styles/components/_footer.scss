@@ -1,0 +1,50 @@
+.footer {
+  color: #333333;
+  height: 5.4rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  @include font-format('sm', 'light');
+
+  &__internal-links {
+    display: flex;
+    flex-grow: 1;
+
+    .btn:nth-child(n + 2) {
+      margin-left: 1.3rem;
+    }
+  }
+
+  &__social-networks {
+    display: flex;
+    align-items: center;
+
+    &-label {
+      margin-bottom: 0.5rem;
+    }
+
+    [class*='icon'] {
+      font-size: 2.5rem;
+    }
+
+    &>*:nth-child(n + 2) {
+      margin-left: 2rem;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    border-top: 3px dotted #707070;
+    $offset: -0.2rem;
+    top: $offset;
+    bottom: $offset;
+    left: $offset;
+    right: $offset;
+    z-index: -1;
+  }
+}
