@@ -32,7 +32,7 @@
     }
 
     &--negative {
-      background-color: map-get($colors, 'negative');
+      background-color: map-get($colors, 'warning');
     }
   }
 

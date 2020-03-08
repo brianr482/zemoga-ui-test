@@ -1,0 +1,40 @@
+.add-celebrity {
+  display: flex;
+  width: 100%;
+  height: 8rem;
+  margin-top: 3.3rem;
+  background: url('/ui-test/layout/assets/imgs/add-celebrity.jpg');
+  background-position-y: 350px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  &__message {
+    display: flex;
+    flex-grow: 1;
+    font-size: 3rem;
+    font-weight: map-get($font-weights, 'light');
+  }
+
+  &__submit {
+    font-size: 2rem;
+    width: 20rem;
+    border-width: 0.3rem;
+  }
+
+  >* {
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#ffffff, 0.85);
+    z-index: 0;
+    height: 100%;
+  }
+}
