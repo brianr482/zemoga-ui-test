@@ -19,12 +19,16 @@ class="list__item voting-card"
   </span>
   <div class="voting-card__extra">
     <button
-      class="btn btn--icon voting-card__vote voting-card__vote--up voting-card__vote--selected"
+      class="btn btn--icon voting-card__vote voting-card__vote--up"
+      [class.voting-card__vote--selected]="voteTypeSelected === 'positive'"
+      (click)="selectVoteType('positive')"
     >
       <span class="icon-thumb-up"></span>
     </button>
     <button
       class="btn btn--icon voting-card__vote voting-card__vote--down"
+      [class.voting-card__vote--selected]="voteTypeSelected === 'negative'"
+      (click)="selectVoteType('negative')"
     >
       <span class="icon-thumb-down"></span>
     </button>

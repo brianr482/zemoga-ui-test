@@ -8,10 +8,19 @@ import { VoteType } from '@app/shared/enums';
   styleUrls: ['./voting-card.component.scss']
 })
 export class VotingCardComponent implements OnInit {
+  public voteTypeSelected: VoteType | null;
   @Input() celebrity: Celebrity;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public selectVoteType(voteType: VoteType) {
+    if (this.voteTypeSelected === voteType) {
+      this.voteTypeSelected = null;
+    } else {
+      this.voteTypeSelected = voteType;
+    }
   }
 
   public getVotePercentage(isPositive?: boolean) {
