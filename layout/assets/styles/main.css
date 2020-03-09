@@ -400,8 +400,16 @@ div.content {
 
 .message__description {
   font-size: 1.5rem;
-  margin-left: 0.85rem;
   line-height: 2.275rem;
+  margin-top: 1rem;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .message__description {
+    margin-top: 0;
+    margin-left: 0.85rem;
+  }
 }
 
 .message [class*='icon'] {
