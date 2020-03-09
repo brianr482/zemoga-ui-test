@@ -189,9 +189,11 @@
 .btn {
   cursor: pointer;
   padding: 1.1rem;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
-.btn--link:hover {
+.btn--link:hover, .btn--link:focus {
   text-decoration: underline;
 }
 
@@ -336,8 +338,16 @@
   background-color: #1CBBB4;
 }
 
+.opinion-card__actions--positive:hover, .opinion-card__actions--positive:focus {
+  background-color: #1fd1c9;
+}
+
 .opinion-card__actions--negative {
   background-color: #FFAD1D;
+}
+
+.opinion-card__actions--negative:hover, .opinion-card__actions--negative:focus {
+  background-color: #ffb637;
 }
 
 .opinion-card__actions--positive, .opinion-card__actions--negative {
@@ -646,6 +656,14 @@ div.content {
   background-color: rgba(255, 173, 29, 0.7);
 }
 
+.voting-card__vote--up:hover, .voting-card__vote--up:focus {
+  background-color: rgba(28, 187, 180, 0.9);
+}
+
+.voting-card__vote--down:hover, .voting-card__vote--down:focus {
+  background-color: rgba(255, 173, 29, 0.9);
+}
+
 .voting-card__vote {
   padding: 0.7rem;
   font-size: 1.8rem;
@@ -665,6 +683,15 @@ div.content {
 .voting-card__vote--selected {
   -webkit-box-shadow: inset 0px 0px 0px 0.2rem white;
           box-shadow: inset 0px 0px 0px 0.2rem white;
+}
+
+.voting-card__vote-action {
+  border-color: white;
+}
+
+.voting-card__vote-action:hover, .voting-card__vote-action:focus {
+  background-color: white;
+  color: black;
 }
 
 .voting-card:before {
@@ -733,6 +760,12 @@ div.content {
   font-size: 2rem;
   width: 20rem;
   border-width: 0.3rem;
+  border-color: black;
+}
+
+.add-celebrity__submit:hover, .add-celebrity__submit:focus {
+  background-color: black;
+  color: white;
 }
 
 .add-celebrity > * {

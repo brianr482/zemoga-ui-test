@@ -1,9 +1,12 @@
 .btn {
   cursor: pointer;
   padding: 1.1rem;
+  transition: background 0.3s;
 
   &--link {
-    &:hover {
+
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }

@@ -97,11 +97,23 @@
     font-size: 2.4rem;
 
     &--positive {
-      background-color: map-get($colors, 'success');
+      $bg-color: map-get($colors, 'success');
+      background-color: $bg-color;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($bg-color, 5%)
+      }
     }
 
     &--negative {
-      background-color: map-get($colors, 'warning');
+      $bg-color: map-get($colors, 'warning');
+      background-color: $bg-color;
+
+      &:hover,
+      &:focus {
+        background-color: lighten($bg-color, 5%)
+      }
     }
 
     &--positive,

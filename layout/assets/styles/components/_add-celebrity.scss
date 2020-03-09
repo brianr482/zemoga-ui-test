@@ -28,6 +28,13 @@
     font-size: 2rem;
     width: 20rem;
     border-width: 0.3rem;
+    border-color: black;
+
+    &:hover,
+&:focus {
+  background-color: black;
+  color: white;
+}
   }
 
   >* {
