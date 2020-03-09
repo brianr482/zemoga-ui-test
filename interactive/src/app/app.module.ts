@@ -8,13 +8,15 @@ import { SharedModule } from './shared';
 import { HeroComponent } from './components/hero/hero.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { ListComponent } from './components/list/list.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     TopbarComponent,
-    ListComponent
+    ListComponent,
+    MessageComponent
   ],
   imports: [
     // Angular
