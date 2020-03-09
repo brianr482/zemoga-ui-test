@@ -11,7 +11,6 @@ import { ListComponent } from './components/list/list.component';
 import { MessageComponent } from './components/message/message.component';
 import { AddCelebrityComponent } from './components/add-celebrity/add-celebrity.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { VotingCardComponent } from './components/voting-card/voting-card.component';
 import { OpinionCardComponent } from './components/opinion-card/opinion-card.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { OpinionCardComponent } from './components/opinion-card/opinion-card.com
     MessageComponent,
     AddCelebrityComponent,
     FooterComponent,
-    VotingCardComponent,
     OpinionCardComponent
   ],
   imports: [

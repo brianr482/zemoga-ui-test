@@ -1,6 +1,4 @@
-:host {
-  background: inherit;
-}
+@import 'abstracts/mixins';
 
 .voting-card {
   display: flex;
