@@ -1,9 +1,6 @@
 {
   "id": 1,
   "userVotes": [
-    {
-      "id": 2,
-      "type": "positive"
-    }
+    2
   ]
 }

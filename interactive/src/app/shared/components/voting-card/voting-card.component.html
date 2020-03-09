@@ -15,29 +15,39 @@ class="voting-card"
     <b>{{ celebrity.period }}</b> in {{ celebrity.category }}
   </div>
   <span class="voting-card__description">
-    {{ celebrity.description }}
+    {{ description }}
   </span>
   <div class="voting-card__extra">
-    <button
-      class="btn btn--icon voting-card__vote voting-card__vote--up"
-      [class.voting-card__vote--selected]="voteTypeSelected === 'positive'"
-      (click)="selectVoteType('positive')"
-    >
-      <span class="icon-thumb-up"></span>
-    </button>
-    <button
-      class="btn btn--icon voting-card__vote voting-card__vote--down"
-      [class.voting-card__vote--selected]="voteTypeSelected === 'negative'"
-      (click)="selectVoteType('negative')"
-    >
-      <span class="icon-thumb-down"></span>
-    </button>
-    <button 
-      class="btn btn--outline voting-card__vote-action"
-      (click)="vote()"
-    >
-      Vote now
-    </button>
+    <ng-container *ngIf="available; else unavailable">
+      <button
+        class="btn btn--icon voting-card__vote voting-card__vote--up"
+        [class.voting-card__vote--selected]="voteTypeSelected === 'positive'"
+        (click)="selectVoteType('positive')"
+      >
+        <span class="icon-thumb-up"></span>
+      </button>
+      <button
+        class="btn btn--icon voting-card__vote voting-card__vote--down voting-card__vote--selected"
+        [class.voting-card__vote--selected]="voteTypeSelected === 'negative'"
+        (click)="selectVoteType('negative')"
+      >
+        <span class="icon-thumb-down"></span>
+      </button>
+      <button 
+        class="btn btn--outline voting-card__vote-action"
+        (click)="vote()"
+      >
+        Vote now
+      </button>
+    </ng-container>
+    <ng-template #unavailable>
+      <button 
+        class="btn btn--outline voting-card__vote-action"
+        (click)="vote(true)"
+      >
+        Vote again
+      </button>
+    </ng-template>
   </div>
 </div>
 <div class="voting-card__counter">

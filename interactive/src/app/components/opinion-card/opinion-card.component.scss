@@ -104,7 +104,7 @@
 
     &--positive {
       $bg-color: map-get($colors, 'success');
-      background-color: $bg-color;
+      background-color: rgba($bg-color, 0.9);
 
       &:hover,
       &:focus {
@@ -114,7 +114,7 @@
 
     &--negative {
       $bg-color: map-get($colors, 'warning');
-      background-color: $bg-color;
+      background-color: rgba($bg-color, 0.9);
 
       &:hover,
       &:focus {

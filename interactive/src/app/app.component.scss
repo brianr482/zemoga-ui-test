@@ -4,7 +4,8 @@
   z-index: 9999;
   position: fixed;
   top: 2rem;
-  right: 2rem;  
+  right: 2rem; 
+  left: 2rem; 
   >app-alert:nth-child(n + 2) {
     margin-top: 2rem;
   }

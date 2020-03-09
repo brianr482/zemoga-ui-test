@@ -9,15 +9,13 @@ import { Celebrity } from '@app/shared/models/celebrity.model';
 })
 export class ListComponent implements OnInit {
 
-
+  public celebrities: Celebrity[];
   constructor(
     private celebrityService: CelebrityService,
   ) { }
 
-  ngOnInit() { }
-
-  public get celebrities(): Celebrity[] {
-    return this.celebrityService.celebrities;
+  ngOnInit() {
+    this.celebrities =  this.celebrityService.celebrities;
   }
 
 }

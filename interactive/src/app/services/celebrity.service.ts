@@ -10,7 +10,18 @@ export class CelebrityService {
   constructor() { }
 
   public get celebrities(): Celebrity[] {
+    const localCelebrities = localStorage.getItem('celebrities');
+    if (localCelebrities) {
+      return JSON.parse(localCelebrities);
+    }
+    this.storeCelebrities(celebritiesFile.celebrities);
     return celebritiesFile.celebrities;
+  }
+
+  public storeCelebrities(celebritiesData: Celebrity[]) {
+    localStorage.setItem(
+      'celebrities', JSON.stringify(celebritiesData)
+    );
   }
 
 }
