@@ -1,0 +1,40 @@
+{
+  "celebrities": [
+    {
+      "id": 1,
+      "fullName": "Kanye West",
+      "period": "1 month ago",
+      "category": "entertainment",
+      "positiveVotes": 64,
+      "negativeVotes": 36,
+      "imageUrl": "assets/imgs/kanye.jpg"
+    },
+    {
+      "id": 2,
+      "fullName": "Mark Zuckerberg",
+      "period": "1 month ago",
+      "category": "business",
+      "positiveVotes": 36,
+      "negativeVotes": 64,
+      "imageUrl": "assets/imgs/mark.jpg"
+    },
+    {
+      "id": 3,
+      "fullName": "Cristina Fernández de Kirchner",
+      "period": "1 month ago",
+      "category": "politics",
+      "positiveVotes": 36,
+      "negativeVotes": 64,
+      "imageUrl": "assets/imgs/cristina.jpg"
+    },
+    {
+      "id": 4,
+      "fullName": "Malala Yousafzai",
+      "period": "1 month ago",
+      "category": "entertainment",
+      "positiveVotes": 64,
+      "negativeVotes": 36,
+      "imageUrl": "assets/imgs/malala.jpg"
+    }
+  ]
+}
