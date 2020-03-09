@@ -12,18 +12,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: red;
   height: 11rem;
   color: white;
-  padding: 2rem 10rem;
+  padding: 2rem 1rem;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
   /* Modifiers */
+  /* Media Queries */
 }
 
 .topbar__title {
@@ -47,19 +52,36 @@
           align-items: center;
   font-size: 1.2rem;
   font-weight: normal;
+  /* Media Queries */
 }
 
 .topbar__menu .topbar__btn:nth-child(n + 2) {
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
 
 .topbar__menu [class*='icon'] {
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 65rem) {
+  .topbar__menu .topbar__btn:nth-child(n + 2) {
+    margin-left: 4rem;
+  }
+}
+
 .topbar--transparent {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(51, 51, 51, 0)), color-stop(60%, rgba(51, 51, 51, 0.53)), to(rgba(51, 51, 51, 0.912202)));
   background: linear-gradient(0deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.53) 60%, rgba(51, 51, 51, 0.912202) 100%);
+}
+
+@media screen and (min-width: 830px) {
+  .topbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2rem 10rem;
+  }
 }
 
 .hero {
