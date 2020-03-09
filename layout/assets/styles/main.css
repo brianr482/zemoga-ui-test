@@ -744,7 +744,7 @@ div.content {
   width: 100%;
   min-height: 8rem;
   margin-top: 3.3rem;
-  background: url("/ui-test/layout/assets/imgs/add-celebrity.jpg");
+  background: url("../imgs/add-celebrity.jpg");
   background-position-y: 350px;
   position: relative;
   display: -webkit-box;
