@@ -27,3 +27,5 @@ I used Glyphter to create a font with the svg icons I'd use in the project. The 
 
 ## Other
 I loaded the fonts locally because there are some cases we need to use a font that is not hosted on Google servers, so we could need to host it on our own server
+
+**Note**: I used a live server that compiled my sass files into a css file. So that's the reason you're going to find a global css files in the styles
