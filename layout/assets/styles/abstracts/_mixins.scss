@@ -6,3 +6,13 @@
     weight: map-get($font-weights, $weight);
   }
 }
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
