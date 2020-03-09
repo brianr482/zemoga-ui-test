@@ -19,9 +19,12 @@
     /* Media Queries */
     @include respond-to('lg') {
       margin: -2.1rem;
+    }
+
+    @include respond-to(1212px) {
+      justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
   }
 
@@ -29,14 +32,28 @@
     width: 100%;
     position: relative;
 
-    //1230
     &:nth-child(n + 2) {
       margin-top: 2.1rem;
     }
 
-    /* Media Queries */
     @include respond-to(533px) {
       width: 49.2rem;
+      margin: 2.1rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 2.1rem;
+      }
+    }
+
+    @include respond-to(1200px) {
+      margin: 0.6rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 0.6rem;
+      }
+    }
+
+    @include respond-to('lg') {
       margin: 2.1rem;
 
       &:nth-child(n + 2) {

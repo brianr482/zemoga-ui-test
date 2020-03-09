@@ -507,22 +507,26 @@ div.content {
 @media screen and (min-width: 1230px) {
   .list__gallery {
     margin: -2.1rem;
+  }
+}
+
+@media screen and (min-width: 1212px) {
+  .list__gallery {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
 .list__item {
   width: 100%;
   position: relative;
-  /* Media Queries */
 }
 
 .list__item:nth-child(n + 2) {
@@ -532,6 +536,24 @@ div.content {
 @media screen and (min-width: 533px) {
   .list__item {
     width: 49.2rem;
+    margin: 2.1rem;
+  }
+  .list__item:nth-child(n + 2) {
+    margin-top: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list__item {
+    margin: 0.6rem;
+  }
+  .list__item:nth-child(n + 2) {
+    margin-top: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .list__item {
     margin: 2.1rem;
   }
   .list__item:nth-child(n + 2) {
