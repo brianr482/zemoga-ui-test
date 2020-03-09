@@ -7,12 +7,14 @@ import { CoreModule } from './core';
 import { SharedModule } from './shared';
 import { HeroComponent } from './components/hero/hero.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
-    TopbarComponent
+    TopbarComponent,
+    ListComponent
   ],
   imports: [
     // Angular
