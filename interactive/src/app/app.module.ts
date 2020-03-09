@@ -9,6 +9,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { ListComponent } from './components/list/list.component';
 import { MessageComponent } from './components/message/message.component';
+import { AddCelebrityComponent } from './components/add-celebrity/add-celebrity.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MessageComponent } from './components/message/message.component';
     HeroComponent,
     TopbarComponent,
     ListComponent,
-    MessageComponent
+    MessageComponent,
+    AddCelebrityComponent
   ],
   imports: [
     // Angular
