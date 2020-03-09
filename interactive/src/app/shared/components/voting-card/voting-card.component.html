@@ -2,64 +2,76 @@
 class="voting-card"
 [style.background]="'url(' + celebrity.imageUrl + ')'"
 >
-<div class="voting-card__info">
-  <h1 class="voting-card__celebrity">
-    <div
-      class="voting-card__overall voting-card__overall--positive"
-    >
-      <span class="icon-thumb-up"></span>
-    </div>
-    {{ celebrity.fullName }}
-  </h1>
-  <div class="voting-card__period">
-    <b>{{ celebrity.period }}</b> in {{ celebrity.category }}
-  </div>
-  <span class="voting-card__description">
-    {{ description }}
-  </span>
-  <div class="voting-card__extra">
-    <ng-container *ngIf="available; else unavailable">
-      <button
-        class="btn btn--icon voting-card__vote voting-card__vote--up"
-        [class.voting-card__vote--selected]="voteTypeSelected === 'positive'"
-        (click)="selectVoteType('positive')"
+  <div class="voting-card__info">
+    <h1 class="voting-card__celebrity">
+      <div
+        class="voting-card__overall voting-card__overall--positive"
       >
         <span class="icon-thumb-up"></span>
-      </button>
-      <button
-        class="btn btn--icon voting-card__vote voting-card__vote--down voting-card__vote--selected"
-        [class.voting-card__vote--selected]="voteTypeSelected === 'negative'"
-        (click)="selectVoteType('negative')"
-      >
-        <span class="icon-thumb-down"></span>
-      </button>
-      <button 
-        class="btn btn--outline voting-card__vote-action"
-        (click)="vote()"
-      >
-        Vote now
-      </button>
-    </ng-container>
-    <ng-template #unavailable>
-      <button 
-        class="btn btn--outline voting-card__vote-action"
-        (click)="vote(true)"
-      >
-        Vote again
-      </button>
-    </ng-template>
+      </div>
+      {{ celebrity.fullName }}
+    </h1>
+    <div class="voting-card__period">
+      <b>{{ celebrity.period }}</b> in {{ celebrity.category }}
+    </div>
+    <span class="voting-card__description">
+      {{ description }}
+    </span>
+    <div class="voting-card__extra">
+      <ng-container *ngIf="available; else unavailable">
+        <button
+          class="btn btn--icon voting-card__vote voting-card__vote--up"
+          [class.voting-card__vote--selected]="voteTypeSelected === 'positive'"
+          (click)="selectVoteType('positive')"
+        >
+          <span class="icon-thumb-up"></span>
+        </button>
+        <button
+          class="btn btn--icon voting-card__vote voting-card__vote--down voting-card__vote--selected"
+          [class.voting-card__vote--selected]="voteTypeSelected === 'negative'"
+          (click)="selectVoteType('negative')"
+        >
+          <span class="icon-thumb-down"></span>
+        </button>
+        <button 
+          class="btn btn--outline voting-card__vote-action"
+          (click)="vote()"
+        >
+          Vote now
+        </button>
+      </ng-container>
+      <ng-template #unavailable>
+        <button 
+          class="btn btn--outline voting-card__vote-action"
+          (click)="vote(true)"
+        >
+          Vote again
+        </button>
+      </ng-template>
+    </div>
   </div>
-</div>
-<div class="voting-card__counter">
-  <div
-    class="voting-card__positive-votes" 
-    [style.width]="getVotePercentage(true) + '%'">
-    <span class="icon-thumb-up"></span> {{ getVotePercentage(true) }}%
+  <div class="voting-card__counter">
+    <div
+      class="voting-card__positive-votes" 
+      [style.width]="getVotePercentage(true) + '%'">
+      <span
+        *ngIf="getVotePercentage(true) > 23"
+        class="icon-thumb-up"
+      ></span>
+      <span *ngIf="getVotePercentage() > 14">
+        {{ getVotePercentage(true) }}%
+      </span>
+    </div>
+    <div
+      class="voting-card__negative-votes" 
+      [style.width]="getVotePercentage() + '%'">
+      <span *ngIf="getVotePercentage() > 14">
+        {{ getVotePercentage() }}%
+      </span>
+      <span
+        class="icon-thumb-down"
+        *ngIf="getVotePercentage() > 23"
+        ></span>
+    </div>
   </div>
-  <div
-    class="voting-card__negative-votes" 
-    [style.width]="getVotePercentage() + '%'">
-    {{ getVotePercentage() }}% <span class="icon-thumb-down"></span>
-  </div>
-</div>
 </div>
