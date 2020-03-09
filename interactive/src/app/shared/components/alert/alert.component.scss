@@ -1,0 +1,26 @@
+@import 'abstracts/mixins';
+
+:host {
+  width: 32rem;
+  padding: 1rem 3rem;
+  display: block;
+  position: fixed;
+  top: 2rem;
+  background-color: #EBEBEB;
+  @include font-format('md', 'light');
+  z-index: 99;
+  -webkit-box-shadow: 0px 4px 8px -2px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 4px 8px -2px rgba(0,0,0,0.33);
+  box-shadow: 0px 4px 8px -2px rgba(0,0,0,0.33);
+
+  @include respond-to('sm') {
+    right: 2rem;
+  }
+}
+
+[class*='icon'] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+}

@@ -16,6 +16,7 @@ import { HowItWorksComponent } from './pages/how-it-works/how-it-works.component
 import { PastTrialsComponent } from './pages/past-trials/past-trials.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { MainComponent } from './pages/main/main.component';
+import { AlertComponent } from './shared/components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +41,13 @@ import { MainComponent } from './pages/main/main.component';
     CoreModule,
     SharedModule,
 
+    // Router
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent,
+  ]
 })
 export class AppModule { }
