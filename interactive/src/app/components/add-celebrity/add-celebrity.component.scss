@@ -33,10 +33,10 @@
     border-color: black;
 
     &:hover,
-&:focus {
-  background-color: black;
-  color: white;
-}
+    &:focus {
+      background-color: black;
+      -webkit-text-fill-color: white;
+    }
   }
 
   >* {
