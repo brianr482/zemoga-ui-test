@@ -1,7 +1,4 @@
 # zemoga-ui-test
-
-# For both part
-
 # Layout part
 ## Live demo
 I deployed the layout part on Firebase Hosting, so you can check it [here](https://layout-test-zemoga.web.app)
