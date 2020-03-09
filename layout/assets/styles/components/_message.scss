@@ -9,7 +9,7 @@
   font-weight: map-get($font-weights, 'light');
 
   &__title {
-    width: 25rem;
+    min-width: 20rem;
     font-size: 2.171rem;
 
     >b {

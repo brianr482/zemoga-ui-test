@@ -61,7 +61,8 @@
   width: 100%;
   position: relative;
   /* 
-    To fix perfomance problem in webkit browsers, on parallax effect
+    To fix perfomance problem in webkit browsers when using
+    parallax effect
   */
   will-change: transform;
 }
@@ -101,8 +102,15 @@
 
 .hero__closing-time span.hero__closing-separator {
   position: absolute;
-  left: 0;
+  left: -0.1rem;
   color: rgba(70, 70, 70, 0.3);
+  top: calc(50% - .4rem);
+}
+
+.hero__closing-time span.hero__closing-separator:before {
+  content: '';
+  height: 100%;
+  background-color: rgba(70, 70, 70, 0.3);
 }
 
 .hero__closing-time .hero__closing-day {
@@ -125,6 +133,7 @@
 
 .btn {
   cursor: pointer;
+  padding: 1.1rem;
 }
 
 .btn--link:hover {
@@ -132,7 +141,7 @@
 }
 
 .btn--outline {
-  min-width: 15rem;
+  min-width: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +154,6 @@
   font-size: 1.4rem;
   border: 0.1rem solid;
   border-color: inherit;
-  padding: 1.1rem 0;
 }
 
 .opinion-card {
@@ -255,6 +263,8 @@
 
 div.content {
   padding: 3.3rem 10.2rem;
+  max-width: 190rem;
+  margin: auto;
 }
 
 .message {
@@ -273,7 +283,7 @@ div.content {
 }
 
 .message__title {
-  width: 25rem;
+  min-width: 20rem;
   font-size: 2.171rem;
 }
 
@@ -294,7 +304,6 @@ div.content {
 }
 
 .list {
-  max-width: 128rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,34 +397,33 @@ div.content {
 
 .voting-card__description {
   font-size: 1.6rem;
-  margin-top: .5rem;
+  margin-top: 1.5rem;
 }
 
 .voting-card__period {
   font-size: 1.2rem;
-  text-align: right;
 }
 
 .voting-card__extra {
-  margin-top: 1.8rem;
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.voting-card__extra :nth-child(n + 2) {
+  margin-left: 1.3rem;
+}
+
 .voting-card__positive-votes {
-  background-color: rgba(28, 187, 180, 0.7);
+  text-align: left;
 }
 
 .voting-card__negative-votes {
   text-align: right;
-  background-color: rgba(255, 173, 29, 0.7);
 }
 
 .voting-card__positive-votes, .voting-card__negative-votes {
@@ -430,6 +438,35 @@ div.content {
   width: 100%;
   font-size: 2.914rem;
   font-weight: 100;
+}
+
+.voting-card__vote--up, .voting-card__positive-votes {
+  background-color: rgba(28, 187, 180, 0.7);
+}
+
+.voting-card__vote--down, .voting-card__negative-votes {
+  background-color: rgba(255, 173, 29, 0.7);
+}
+
+.voting-card__vote {
+  padding: 0.7rem;
+  font-size: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.voting-card__vote--selected {
+  -webkit-box-shadow: inset 0px 0px 0px 0.2rem white;
+          box-shadow: inset 0px 0px 0px 0.2rem white;
 }
 
 .voting-card:before {

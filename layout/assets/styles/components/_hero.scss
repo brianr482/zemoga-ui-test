@@ -8,7 +8,8 @@
   position: relative;
 
   /* 
-    To fix perfomance problem in webkit browsers, on parallax effect
+    To fix perfomance problem in webkit browsers when using
+    parallax effect
   */
   will-change: transform;
 
@@ -42,8 +43,15 @@
 
     span.hero__closing-separator {
       position: absolute;
-      left: 0;
+      left: -0.1rem;
       color: rgba(70, 70, 70, .3);
+      top: calc(50% - .4rem);
+
+      &:before {
+        content: '';
+        height: 100%;
+        background-color: rgba(70, 70, 70, .3);
+      }
     }
 
     .hero__closing-day {

@@ -43,28 +43,29 @@
 
   &__description {
     font-size: 1.6rem;
-    margin-top: .5rem;
+    margin-top: 1.5rem;
   }
 
   &__period {
     font-size: 1.2rem;
-    text-align: right;
   }
 
   &__extra {
-    margin-top: 1.8rem;
+    margin-top: 4rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+
+    :nth-child(n + 2) {
+      margin-left: 1.3rem;
+    }
   }
 
   &__positive-votes {
-    background-color: rgba(map-get($colors, 'success'), .7);
+    text-align: left;
   }
 
   &__negative-votes {
     text-align: right;
-    background-color: rgba(map-get($colors, 'warning'), .7);
   }
 
   &__positive-votes,
@@ -78,7 +79,30 @@
     width: 100%;
     font-size: 2.914rem;
     font-weight: map-get($font-weights, 'light');
-    ;
+  }
+
+  &__vote--up,
+  &__positive-votes {
+    background-color: rgba(map-get($colors, 'success'), .7);
+  }
+
+  &__vote--down,
+  &__negative-votes {
+    background-color: rgba(map-get($colors, 'warning'), .7);
+  }
+
+  &__vote {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--selected {
+      box-shadow: inset 0px 0px 0px 0.2rem white;
+    }
   }
 
   &:before {
