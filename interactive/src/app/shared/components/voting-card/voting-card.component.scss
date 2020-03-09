@@ -1,0 +1,158 @@
+@import 'abstracts/mixins';
+
+.voting-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50rem;
+  color: white;
+  position: relative;
+  background-position: right;
+
+  &__info {
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__overall {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    width: 3.1rem;
+    height: 3.1rem;
+    position: absolute;
+    left: -4rem;
+    bottom: 1rem;
+
+    &--positive {
+      background-color: map-get($colors, 'success');
+    }
+
+    &--negative {
+      background-color: map-get($colors, 'warning');
+    }
+  }
+
+  &__celebrity {
+    font-size: 4.5rem;
+    position: relative;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  &__period {
+    font-size: 1.2rem;
+  }
+
+  &__extra {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+
+    :nth-child(n + 2) {
+      margin-left: 1.3rem;
+    }
+  }
+
+  &__positive-votes {
+    text-align: left;
+  }
+
+  &__negative-votes {
+    text-align: right;
+  }
+
+  &__positive-votes,
+  &__negative-votes {
+    padding: 0.9rem 1rem;
+  }
+
+  &__counter {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: map-get($font-weights, 'light');
+
+    /* Media Queries */
+    @include respond-to('sm') {
+      font-size: 2.914rem;
+    }
+  }
+
+  &__vote--up,
+  &__positive-votes {
+    background-color: rgba(map-get($colors, 'success'), 0.7);
+  }
+
+  &__vote--down,
+  &__negative-votes {
+    background-color: rgba(map-get($colors, 'warning'), 0.7);
+  }
+
+  &__vote {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--selected {
+      box-shadow: inset 0px 0px 0px 0.2rem white;
+    }
+
+    &--down {
+      &:hover,
+      &:focus {
+        background-color: rgba(map-get($colors, 'warning'), 0.9);
+      }
+    }
+
+    &--up {
+      &:hover,
+      &:focus {
+        background-color: rgba(map-get($colors, 'success'), 0.9);
+      }
+    }
+
+    &-action {
+      border-color: white;
+
+      &:hover {
+        background-color: white;
+        -webkit-text-fill-color: black;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.71) 0%,
+        rgba(0, 0, 0, 0.61) 38%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0) 100%);
+  }
+
+  /* Media Queries */
+  @include respond-to('sm') {
+    background-position: unset;
+    height: 55rem;
+  }
+}

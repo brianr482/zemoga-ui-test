@@ -1,0 +1,99 @@
+@import 'abstracts/mixins';
+
+.hero {
+  height: 74.5rem;
+
+  background: url('assets/imgs/pope.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+
+  /* 
+    To fix perfomance problem in webkit browsers when using
+    parallax effect
+  */
+  will-change: transform;
+
+  &__content {
+    background: inherit;
+    padding: 20rem 2rem 0rem 2rem;
+    max-width: 123rem;
+    margin: auto;
+
+    @include respond-to('sm') {
+      padding-left: 13rem;
+      padding: 20rem 10.2rem 0rem 10.2rem;
+    }
+
+  }
+
+  &__closing-bar {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+  }
+
+  &__closing-label {
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgba(70, 70, 70, .3);
+    width: 40%;
+    justify-content: flex-end;
+
+    /* Media Queries */
+    @include respond-to('sm') {
+      width: 28%;
+    }
+  }
+
+  &__closing-time {
+    background-color: rgba(255, 255, 255, .7);
+    color: #464646;
+    width: 100%;
+    padding: 0 1.45rem;
+    position: relative;
+
+    span.hero__closing-separator {
+      color: rgba(70, 70, 70, .3);
+      position: absolute;
+      left: 0;
+
+      &:before {
+        content: '';
+        height: 100%;
+        background-color: rgba(70, 70, 70, .3);
+      }
+
+      [class*='icon'] {
+        position: absolute;
+        left: -0.12rem;
+        top: -0.3rem;
+      }
+    }
+
+    .hero__closing-day {
+      @include font-format('lg');
+
+      /* Media Queries */
+      @include respond-to('sm') {
+        font-size: 3.68rem;
+      }
+    }
+
+    span.hero__closing-period {
+      font-weight: map-get($font-weights, 'light');
+    }
+  }
+
+
+
+  &__closing-label,
+  &__closing-time {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+}
