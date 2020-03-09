@@ -10,6 +10,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { ListComponent } from './components/list/list.component';
 import { MessageComponent } from './components/message/message.component';
 import { AddCelebrityComponent } from './components/add-celebrity/add-celebrity.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddCelebrityComponent } from './components/add-celebrity/add-celebrity.
     TopbarComponent,
     ListComponent,
     MessageComponent,
-    AddCelebrityComponent
+    AddCelebrityComponent,
+    FooterComponent
   ],
   imports: [
     // Angular
