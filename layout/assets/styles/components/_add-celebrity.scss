@@ -1,0 +1,69 @@
+.add-celebrity {
+  width: 100%;
+  min-height: 8rem;
+  margin-top: 3.3rem;
+  background: url('../imgs/add-celebrity.jpg');
+  background-position-y: 350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  &__message {
+    display: flex;
+    flex-grow: 1;
+    font-size: 3rem;
+    font-weight: map-get($font-weights, 'light');
+    text-align: center;
+
+    /* Media Queries */
+    @include respond-to('md') {
+      text-align: unset;
+    }
+  }
+
+  &__submit {
+    font-size: 2rem;
+    width: 20rem;
+    border-width: 0.3rem;
+    border-color: black;
+
+    &:hover,
+    &:focus {
+      background-color: black;
+      -webkit-text-fill-color: white;
+    }
+  }
+
+  >* {
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#ffffff, 0.85);
+    z-index: 0;
+    height: 100%;
+  }
+
+  :nth-child(n + 2) {
+    margin-top: 1.5rem;
+  }
+
+  /* Media Queries */
+  @include respond-to('md') {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    :nth-child(n + 2) {
+      margin-top: 0;
+    }
+  }
+}
