@@ -55,15 +55,20 @@
     position: relative;
 
     span.hero__closing-separator {
-      position: absolute;
-      left: -0.1rem;
       color: rgba(70, 70, 70, .3);
-      top: calc(50% - .4rem);
+      position: absolute;
+      left: 0;
 
       &:before {
         content: '';
         height: 100%;
         background-color: rgba(70, 70, 70, .3);
+      }
+
+      [class*='icon'] {
+        position: absolute;
+        left: -0.12rem;
+        top: -0.3rem;
       }
     }
 
