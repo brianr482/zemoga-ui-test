@@ -15,11 +15,15 @@
 
   &__content {
     background: inherit;
-    padding: 20rem 3rem 0rem 3rem;
+    padding: 20rem 2rem 0rem 2rem;
+    max-width: 123rem;
+    margin: auto;
 
     @include respond-to('sm') {
       padding-left: 13rem;
+      padding: 20rem 10.2rem 0rem 10.2rem;
     }
+
   }
 
   &__closing-bar {

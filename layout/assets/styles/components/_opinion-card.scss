@@ -22,9 +22,16 @@
     font-size: 1.4rem;
     font-weight: map-get($font-weights, 'light');
     position: relative;
+    display: flex;
 
     a {
       text-decoration: underline;
+    }
+
+    [class*='icon'] {
+      font-size: 1.8rem;
+      margin-top: 0.09rem;
+      margin-right: 0.5rem;
     }
   }
 

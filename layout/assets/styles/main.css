@@ -100,12 +100,15 @@
 
 .hero__content {
   background: inherit;
-  padding: 20rem 3rem 0rem 3rem;
+  padding: 20rem 2rem 0rem 2rem;
+  max-width: 123rem;
+  margin: auto;
 }
 
 @media screen and (min-width: 767px) {
   .hero__content {
     padding-left: 13rem;
+    padding: 20rem 10.2rem 0rem 10.2rem;
   }
 }
 
@@ -237,10 +240,19 @@
   font-size: 1.4rem;
   font-weight: 100;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .opinion-card__extra-info a {
   text-decoration: underline;
+}
+
+.opinion-card__extra-info [class*='icon'] {
+  font-size: 1.8rem;
+  margin-top: 0.09rem;
+  margin-right: 0.5rem;
 }
 
 .opinion-card__description {
@@ -357,7 +369,7 @@
 
 div.content {
   padding: 3.3rem 2rem;
-  max-width: 190rem;
+  max-width: 123rem;
   margin: auto;
   /* Media Queries */
 }
@@ -478,12 +490,13 @@ div.content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: -1rem;
+  margin: 0;
   /* Media Queries */
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .list__gallery {
+    margin: -2.1rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -502,14 +515,17 @@ div.content {
   /* Media Queries */
 }
 
-.list__item > :nth-child(n + 2) {
-  margin-top: 1rem;
+.list__item:nth-child(n + 2) {
+  margin-top: 2.1rem;
 }
 
 @media screen and (min-width: 533px) {
   .list__item {
     width: 49.2rem;
-    margin: 1rem;
+    margin: 2.1rem;
+  }
+  .list__item:nth-child(n + 2) {
+    margin-top: 2.1rem;
   }
 }
 
@@ -524,9 +540,11 @@ div.content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 55rem;
+  height: 50rem;
   color: white;
   position: relative;
+  background-position: right;
+  /* Media Queries */
 }
 
 .voting-card__info {
@@ -609,8 +627,15 @@ div.content {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  font-size: 2.914rem;
+  font-size: 2rem;
   font-weight: 100;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .voting-card__counter {
+    font-size: 2.914rem;
+  }
 }
 
 .voting-card__vote--up, .voting-card__positive-votes {
@@ -652,6 +677,13 @@ div.content {
   background: black;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.71)), color-stop(38%, rgba(0, 0, 0, 0.61)), color-stop(75%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.71) 0%, rgba(0, 0, 0, 0.61) 38%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media screen and (min-width: 767px) {
+  .voting-card {
+    background-position: unset;
+    height: 55rem;
+  }
 }
 
 .add-celebrity {
@@ -838,6 +870,15 @@ div.content {
   left: -0.2rem;
   right: -0.2rem;
   z-index: -1;
+}
+
+@media screen and (min-width: 767px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 html,

@@ -14,10 +14,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: -1rem;
+    margin: 0;
 
     /* Media Queries */
     @include respond-to('lg') {
+      margin: -2.1rem;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -28,15 +29,19 @@
     width: 100%;
     position: relative;
 
-    > :nth-child(n + 2) {
-      margin-top: 1rem;
+    //1230
+    &:nth-child(n + 2) {
+      margin-top: 2.1rem;
     }
 
     /* Media Queries */
     @include respond-to(533px) {
       width: 49.2rem;
-      margin: 1rem;
+      margin: 2.1rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 2.1rem;
+      }
     }
   }
-
 }

@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 55rem;
+  height: 50rem;
   color: white;
   position: relative;
+  background-position: right;
 
   &__info {
     padding: 0 4rem;
@@ -76,8 +77,13 @@
   &__counter {
     display: flex;
     width: 100%;
-    font-size: 2.914rem;
+    font-size: 2rem;
     font-weight: map-get($font-weights, 'light');
+
+    /* Media Queries */
+    @include respond-to('sm') {
+      font-size: 2.914rem;
+    }
   }
 
   &__vote--up,
@@ -117,5 +123,11 @@
         rgba(0, 0, 0, 0.61) 38%,
         rgba(0, 0, 0, 0) 75%,
         rgba(0, 0, 0, 0) 100%);
+  }
+
+  /* Media Queries */
+  @include respond-to('sm') {
+    background-position: unset;
+    height: 55rem;
   }
 }

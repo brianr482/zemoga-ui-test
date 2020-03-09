@@ -66,5 +66,7 @@
   }
 
   /* Media Queries */
-  @include respond-to('sm') {}
+  @include respond-to('sm') {
+    flex-direction: row;
+  }
 }
