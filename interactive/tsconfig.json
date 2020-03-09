@@ -5,6 +5,7 @@
     "paths": {
       "@app/*": ["app/*"],
       "@env/*": ["environments/*"],
+      "@dummy/*": ["dummy-data/*"],
       "@core/*": ["app/core/*"],
       "@feat/*": ["app/feat/*"],
       "@shared/*": ["app/shared/*"],
@@ -24,7 +25,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

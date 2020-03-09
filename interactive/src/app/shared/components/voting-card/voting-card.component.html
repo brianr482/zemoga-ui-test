@@ -1,7 +1,6 @@
-<!-- Kanye -->
 <div
 class="list__item voting-card"
-style="background-image: url('assets/imgs/kanye.jpg');"
+[style.background]="'url(' + celebrity.imageUrl + ')'"
 >
 <div class="voting-card__info">
   <h1 class="voting-card__celebrity">
@@ -10,14 +9,13 @@ style="background-image: url('assets/imgs/kanye.jpg');"
     >
       <span class="icon-thumb-up"></span>
     </div>
-    Kanye West
+    {{ celebrity.fullName }}
   </h1>
   <div class="voting-card__period">
-    <b>1 month ago</b> in Entertainment
+    <b>{{ celebrity.period }}</b> in {{ celebrity.category }}
   </div>
   <span class="voting-card__description">
-    Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
-    Aenean eu velit libero.
+    {{ celebrity.description }}
   </span>
   <div class="voting-card__extra">
     <button
@@ -36,11 +34,15 @@ style="background-image: url('assets/imgs/kanye.jpg');"
   </div>
 </div>
 <div class="voting-card__counter">
-  <div class="voting-card__positive-votes" style="width: 64%;">
-    <span class="icon-thumb-up"></span> 64%
+  <div
+    class="voting-card__positive-votes" 
+    [style.width]="getVotePercentage(true) + '%'">
+    <span class="icon-thumb-up"></span> {{ getVotePercentage(true) }}%
   </div>
-  <div class="voting-card__negative-votes" style="width: 36%;">
-    36% <span class="icon-thumb-down"></span>
+  <div
+    class="voting-card__negative-votes" 
+    [style.width]="getVotePercentage() + '%'">
+    {{ getVotePercentage() }}% <span class="icon-thumb-down"></span>
   </div>
 </div>
 </div>

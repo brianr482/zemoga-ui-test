@@ -1,5 +1,9 @@
 @import 'abstracts/mixins';
 
+:host {
+  background: inherit;
+}
+
 .opinion-card {
   position: relative;
   background: inherit;

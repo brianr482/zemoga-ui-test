@@ -1,17 +1,12 @@
 <div class="list">
   <h1 class="list__title">Votes</h1>
   <div class="list__gallery">
-    <!-- Kanye -->
-    <app-voting-card class="list__item"></app-voting-card>
 
-    <!-- Kanye -->
-    <app-voting-card class="list__item"></app-voting-card>
-
-    <!-- Kanye -->
-    <app-voting-card class="list__item"></app-voting-card>
-
-    <!-- Kanye -->
-    <app-voting-card class="list__item"></app-voting-card>
+    <app-voting-card 
+      *ngFor="let celebrity of celebrities"
+      class="list__item"
+      [celebrity]="celebrity"
+    ></app-voting-card>
 
   </div>
 </div>

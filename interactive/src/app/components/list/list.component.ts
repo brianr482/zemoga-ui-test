@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CelebrityService } from '@app/services/celebrity.service';
+import { Celebrity } from '@app/shared/models/celebrity.model';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(
+    private celebrityService: CelebrityService,
+  ) { }
+
+  ngOnInit() { }
+
+  public get celebrities(): Celebrity[] {
+    return this.celebrityService.celebrities;
   }
 
 }
