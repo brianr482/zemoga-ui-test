@@ -975,19 +975,19 @@ button {
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url("/ui-test/layout/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url("/ui-test/layout/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
   font-weight: 100;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url("/ui-test/layout/assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
