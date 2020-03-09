@@ -340,7 +340,7 @@
 }
 
 .opinion-card__actions--positive {
-  background-color: #1CBBB4;
+  background-color: rgba(28, 187, 180, 0.9);
 }
 
 .opinion-card__actions--positive:hover, .opinion-card__actions--positive:focus {
@@ -348,7 +348,7 @@
 }
 
 .opinion-card__actions--negative {
-  background-color: #FFAD1D;
+  background-color: rgba(255, 173, 29, 0.9);
 }
 
 .opinion-card__actions--negative:hover, .opinion-card__actions--negative:focus {
@@ -683,14 +683,6 @@ div.content {
   background-color: rgba(255, 173, 29, 0.7);
 }
 
-.voting-card__vote--up:hover, .voting-card__vote--up:focus {
-  background-color: rgba(28, 187, 180, 0.9);
-}
-
-.voting-card__vote--down:hover, .voting-card__vote--down:focus {
-  background-color: rgba(255, 173, 29, 0.9);
-}
-
 .voting-card__vote {
   padding: 0.7rem;
   font-size: 1.8rem;
@@ -718,7 +710,15 @@ div.content {
 
 .voting-card__vote-action:hover, .voting-card__vote-action:focus {
   background-color: white;
-  color: black;
+  -webkit-text-fill-color: black;
+}
+
+.voting-card__vote--up:hover, .voting-card__vote--up:focus {
+  background-color: rgba(28, 187, 180, 0.9);
+}
+
+.voting-card__vote--down:hover, .voting-card__vote--down:focus {
+  background-color: rgba(255, 173, 29, 0.9);
 }
 
 .voting-card:before {
@@ -792,7 +792,7 @@ div.content {
 
 .add-celebrity__submit:hover, .add-celebrity__submit:focus {
   background-color: black;
-  color: white;
+  -webkit-text-fill-color: white;
 }
 
 .add-celebrity > * {

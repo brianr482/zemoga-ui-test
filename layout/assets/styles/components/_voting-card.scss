@@ -96,22 +96,6 @@
     background-color: rgba(map-get($colors, 'warning'), 0.7);
   }
 
-  &__vote--up {
-
-    &:hover,
-    &:focus {
-      background-color: rgba(map-get($colors, 'success'), 0.9);
-    }
-  }
-
-  &__vote--down {
-
-    &:hover,
-    &:focus {
-      background-color: rgba(map-get($colors, 'warning'), 0.9);
-    }
-  }
-
   &__vote {
     padding: 0.7rem;
     font-size: 1.8rem;
@@ -131,7 +115,21 @@
       &:hover,
       &:focus {
         background-color: white;
-        color: black;
+        -webkit-text-fill-color: black;
+      }
+    }
+
+    &--up {
+      &:hover,
+      &:focus {
+        background-color: rgba(map-get($colors, 'success'), 0.9);
+      }
+    }
+  
+    &--down {
+      &:hover,
+      &:focus {
+        background-color: rgba(map-get($colors, 'warning'), 0.9);
       }
     }
   }
