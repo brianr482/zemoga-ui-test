@@ -13,8 +13,6 @@ export class NotificationService {
   ) { }
 
   show(message: string, closeTime = this.DEFAULT_TIME) {
-    console.log('HERE');
-    
     const compRef = this.domService
       .createComponent(AlertComponent) as ComponentRef<AlertComponent>;
     compRef.instance.message = message;

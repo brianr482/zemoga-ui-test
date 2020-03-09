@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Celebrity } from '@app/shared/models';
 import { VoteType } from '@app/shared/enums';
+import { NotificationService } from '@app/core/services/notification.service';
 
 @Component({
   selector: 'app-voting-card',
@@ -10,9 +11,17 @@ import { VoteType } from '@app/shared/enums';
 export class VotingCardComponent implements OnInit {
   public voteTypeSelected: VoteType | null;
   @Input() celebrity: Celebrity;
-  constructor() { }
+  constructor(
+    private notificationService: NotificationService,
+  ) { }
 
   ngOnInit() {
+  }
+
+  public vote() {
+    if (this.voteTypeSelected) {
+      this.notificationService.show('Thank you for voting!');
+    }
   }
 
   public selectVoteType(voteType: VoteType) {

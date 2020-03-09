@@ -32,7 +32,10 @@ class="voting-card"
     >
       <span class="icon-thumb-down"></span>
     </button>
-    <button class="btn btn--outline voting-card__vote-action">
+    <button 
+      class="btn btn--outline voting-card__vote-action"
+      (click)="vote()"
+    >
       Vote now
     </button>
   </div>
