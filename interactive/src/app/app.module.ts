@@ -12,6 +12,10 @@ import { MessageComponent } from './components/message/message.component';
 import { AddCelebrityComponent } from './components/add-celebrity/add-celebrity.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OpinionCardComponent } from './components/opinion-card/opinion-card.component';
+import { HowItWorksComponent } from './pages/how-it-works/how-it-works.component';
+import { PastTrialsComponent } from './pages/past-trials/past-trials.component';
+import { AuthComponent } from './pages/auth/auth.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { OpinionCardComponent } from './components/opinion-card/opinion-card.com
     MessageComponent,
     AddCelebrityComponent,
     FooterComponent,
-    OpinionCardComponent
+    OpinionCardComponent,
+    HowItWorksComponent,
+    PastTrialsComponent,
+    AuthComponent,
+    MainComponent
   ],
   imports: [
     // Angular
