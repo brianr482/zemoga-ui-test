@@ -15,7 +15,11 @@
 
   &__content {
     background: inherit;
-    padding: 20rem 10rem 0rem 13rem;
+    padding: 20rem 3rem 0rem 3rem;
+
+    @include respond-to('sm') {
+      padding-left: 13rem;
+    }
   }
 
   &__closing-bar {
@@ -30,8 +34,13 @@
     font-size: 1.3rem;
     color: white;
     background-color: rgba(70, 70, 70, .3);
-    width: 28%;
+    width: 40%;
     justify-content: flex-end;
+
+    /* Media Queries */
+    @include respond-to('sm') {
+      width: 28%;
+    }
   }
 
   &__closing-time {
@@ -55,7 +64,12 @@
     }
 
     .hero__closing-day {
-      font-size: 3.68rem;
+      @include font-format('lg');
+
+      /* Media Queries */
+      @include respond-to('sm') {
+        font-size: 3.68rem;
+      }
     }
 
     span.hero__closing-period {

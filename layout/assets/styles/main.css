@@ -100,7 +100,13 @@
 
 .hero__content {
   background: inherit;
-  padding: 20rem 10rem 0rem 13rem;
+  padding: 20rem 3rem 0rem 3rem;
+}
+
+@media screen and (min-width: 767px) {
+  .hero__content {
+    padding-left: 13rem;
+  }
 }
 
 .hero__closing-bar {
@@ -117,10 +123,17 @@
   font-size: 1.3rem;
   color: white;
   background-color: rgba(70, 70, 70, 0.3);
-  width: 28%;
+  width: 40%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .hero__closing-label {
+    width: 28%;
+  }
 }
 
 .hero__closing-time {
@@ -145,7 +158,15 @@
 }
 
 .hero__closing-time .hero__closing-day {
-  font-size: 3.68rem;
+  font-size: 2.4rem;
+  font-weight: normal;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .hero__closing-time .hero__closing-day {
+    font-size: 3.68rem;
+  }
 }
 
 .hero__closing-time span.hero__closing-period {
@@ -192,13 +213,24 @@
   background: inherit;
   max-width: 50rem;
   width: 100%;
+  margin: auto;
+  /* Media Queries */
 }
 
 .opinion-card__verdict {
   margin-top: 4rem;
   font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: normal;
   font-weight: 700;
   position: relative;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .opinion-card__verdict {
+    font-size: 2rem;
+  }
 }
 
 .opinion-card__extra-info {
@@ -217,13 +249,14 @@
   margin-top: 1.8rem;
   line-height: 2.1rem;
   position: relative;
+  word-spacing: .4rem;
 }
 
 .opinion-card__content {
   overflow: hidden;
   color: white;
   position: relative;
-  padding: 3rem 6rem 3rem 3rem;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,20 +266,28 @@
           flex-direction: column;
   background: inherit;
   z-index: 1;
+  /* Media Queries */
 }
 
 .opinion-card__content:before {
   content: '';
   background: inherit;
   position: absolute;
-  left: -4rem;
-  top: -4rem;
-  bottom: -4rem;
-  right: -4rem;
-  -webkit-box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.3);
-          box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.3);
-  -webkit-filter: blur(2rem);
-          filter: blur(2rem);
+  left: -7rem;
+  top: -7rem;
+  bottom: -7rem;
+  right: -7rem;
+  -webkit-box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.5);
+          box-shadow: inset 0 0 0 3000px rgba(51, 51, 51, 0.5);
+  -webkit-filter: blur(3rem);
+          filter: blur(3rem);
+}
+
+@media screen and (min-width: 767px) {
+  .opinion-card__content {
+    font-size: 2rem;
+    padding: 3rem 6rem 3rem 3rem;
+  }
 }
 
 .opinion-card__question {
@@ -256,17 +297,27 @@
 }
 
 .opinion-card__celebrity {
-  font-size: 6rem;
+  font-size: 3.2rem;
+  font-weight: normal;
   color: white;
   position: relative;
+  /* Media Queries */
+}
+
+@media screen and (min-width: 767px) {
+  .opinion-card__celebrity {
+    font-size: 6rem;
+  }
 }
 
 .opinion-card__actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 8rem;
+  height: 6rem;
   color: white;
+  font-size: 2.4rem;
+  /* Media Queries */
 }
 
 .opinion-card__actions--positive {
@@ -287,9 +338,21 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 3.7rem;
   padding: 0.7rem;
   width: 50%;
+}
+
+@media screen and (min-width: 767px) {
+  .opinion-card__actions {
+    height: 8rem;
+    font-size: 3.7rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .opinion-card {
+    margin: unset;
+  }
 }
 
 div.content {
