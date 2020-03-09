@@ -12,9 +12,16 @@
 
   &__gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     margin: -1rem;
+
+    /* Media Queries */
+    @include respond-to('lg') {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {

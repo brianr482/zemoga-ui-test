@@ -1,5 +1,10 @@
 div.content {
-  padding: 3.3rem 10.2rem;
+  padding: 3.3rem 2rem;
   max-width: 190rem;
   margin: auto;
+
+  /* Media Queries */
+  @include respond-to('md') {
+    padding: 3.3rem 10.2rem;
+  }
 }
